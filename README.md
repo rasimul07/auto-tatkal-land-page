@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Auto Tatkal landing site
 
-## Getting Started
+Marketing site for the **IRCTC Tatkal Auto Booking** Chrome extension.
 
-First, run the development server:
+## Pages
+
+| Route | Purpose |
+|-------|---------|
+| `/` | Landing — features, how it works, plans |
+| `/privacy-policy` | Privacy policy (Chrome Web Store URL) |
+| `/thank-you` | Post-install onboarding steps |
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy `.env.example` to `.env.local` and set:
 
-## Learn More
+| Variable | Description |
+|----------|-------------|
+| `NEXT_PUBLIC_SITE_URL` | Public site URL (e.g. `https://your-domain.com`) |
+| `NEXT_PUBLIC_CHROME_STORE_URL` | Chrome Web Store listing URL (leave empty until published) |
+| `NEXT_PUBLIC_BMC_URL` | Buy Me a Coffee page (default: `https://buymeacoffee.com/mritools`) |
+| `NEXT_PUBLIC_SUPPORT_EMAIL` | Optional support email shown on privacy page |
 
-To learn more about Next.js, take a look at the following resources:
+## Build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Chrome Web Store
 
-## Deploy on Vercel
+After deploy, set **Privacy policy URL** to:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+https://<your-domain>/privacy-policy
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Related repo
+
+Extension source: [rail-ticket](../rail-ticket)
+# auto-tatkal-land-page
