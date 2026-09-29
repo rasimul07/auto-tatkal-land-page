@@ -26,7 +26,7 @@ Copy `.env.example` to `.env.local` and set:
 | Variable | Description |
 |----------|-------------|
 | `NEXT_PUBLIC_SITE_URL` | Public site URL (e.g. `https://your-domain.com`) |
-| `NEXT_PUBLIC_CHROME_STORE_URL` | Chrome Web Store listing URL (leave empty until published) |
+| `NEXT_PUBLIC_CHROME_STORE_URL` | Chrome Web Store listing URL (defaults to the live listing) |
 | `NEXT_PUBLIC_BMC_URL` | Buy Me a Coffee page (default: `https://buymeacoffee.com/mritools`) |
 | `NEXT_PUBLIC_SUPPORT_EMAIL` | Optional support email shown on privacy page |
 

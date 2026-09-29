@@ -3,8 +3,6 @@ import Link from "next/link";
 import { features, plans, site, steps } from "@/lib/site";
 
 export default function HomePage() {
-  const storeReady = site.chromeStoreUrl !== "#";
-
   return (
     <main>
       {/* Hero */}
@@ -21,10 +19,11 @@ export default function HomePage() {
             <div className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
               <a
                 href={site.chromeStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-[var(--rt-accent)] px-6 py-3 font-semibold text-white hover:opacity-90"
-                {...(storeReady ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               >
-                {storeReady ? "Add to Chrome" : "Chrome Web Store — coming soon"}
+                Add to Chrome
               </a>
               <a
                 href={site.bmcUrl}

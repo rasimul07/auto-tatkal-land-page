@@ -36,8 +36,6 @@ const onboardingSteps = [
 ];
 
 export default function ThankYouPage() {
-  const storeReady = site.chromeStoreUrl !== "#";
-
   return (
     <main className="mx-auto max-w-2xl px-4 py-12 sm:px-6">
       <div className="text-center">
@@ -92,16 +90,14 @@ export default function ThankYouPage() {
       </ol>
 
       <div className="mt-10 flex flex-wrap justify-center gap-4">
-        {storeReady && (
-          <a
-            href={site.chromeStoreUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-[var(--rt-accent)] px-6 py-3 text-sm font-semibold text-white hover:opacity-90"
-          >
-            Open in Chrome Web Store
-          </a>
-        )}
+        <a
+          href={site.chromeStoreUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full bg-[var(--rt-accent)] px-6 py-3 text-sm font-semibold text-white hover:opacity-90"
+        >
+          Open in Chrome Web Store
+        </a>
         <Link
           href="/"
           className="rounded-full border border-[var(--rt-primary)] px-6 py-3 text-sm font-semibold text-[var(--rt-primary)] hover:bg-[var(--rt-surface-muted)]"

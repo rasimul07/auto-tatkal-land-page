@@ -3,8 +3,6 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 
 export function SiteHeader() {
-  const storeReady = site.chromeStoreUrl !== "#";
-
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--rt-border)] bg-[var(--rt-surface)]/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
@@ -28,10 +26,11 @@ export function SiteHeader() {
           </Link>
           <a
             href={site.chromeStoreUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-[var(--rt-accent)] px-4 py-2 text-white hover:opacity-90"
-            {...(storeReady ? { target: "_blank", rel: "noopener noreferrer" } : {})}
           >
-            {storeReady ? "Get extension" : "Coming soon"}
+            Get extension
           </a>
         </nav>
       </div>

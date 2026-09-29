@@ -6,7 +6,8 @@ export const site = {
     "Independent Chrome extension assistant for IRCTC train booking. Not affiliated with IRCTC or Indian Railways.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   chromeStoreUrl:
-    process.env.NEXT_PUBLIC_CHROME_STORE_URL?.trim() || "#",
+    process.env.NEXT_PUBLIC_CHROME_STORE_URL?.trim() ||
+    "https://chromewebstore.google.com/detail/efndhoajkoaiibcepdebfgdppkdaebnj",
   bmcUrl:
     process.env.NEXT_PUBLIC_BMC_URL?.trim() ||
     "https://buymeacoffee.com/mritools",
